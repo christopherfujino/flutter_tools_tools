@@ -2,5 +2,13 @@
   "name": "flutter-tools-tools-extension",
   "description": "A browser extension for maintaining the Flutter CLI tool.",
   "version": "0.1",
-  "manifest_version": 3
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "ui.html"
+  }
 }
