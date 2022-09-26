@@ -1,0 +1,6 @@
+{
+  "name": "flutter-tools-tools-extension",
+  "description": "A browser extension for maintaining the Flutter CLI tool.",
+  "version": "0.1",
+  "manifest_version": 3
+}
