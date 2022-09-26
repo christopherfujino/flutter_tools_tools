@@ -20,4 +20,5 @@ goCrashButton.addEventListener("click", async () => {
 
 function goCrash() {
   console.log("Sort the crashes!");
+  alert("Hi there!");
 }
