@@ -1,0 +1,11 @@
+{
+  "name": "flutter-tools-tools-extension",
+  "private": true,
+  "dependencies": {
+    "@types/chrome": "^0.0.197"
+  },
+  "devDependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

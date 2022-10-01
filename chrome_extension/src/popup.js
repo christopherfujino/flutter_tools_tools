@@ -12,10 +12,13 @@ goCrashButton.addEventListener("click", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
   console.log(tab);
 
-  chrome.scripting.executeScript({
+  console.log();
+  const executionsResults = await chrome.scripting.executeScript({
     target: { tabId: tab.id },
     func: goCrash,
   });
+  console.log("execution results:");
+  console.log(executionsResults);
 });
 
 function goCrash() {
