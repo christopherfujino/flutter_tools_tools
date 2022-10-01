@@ -1,0 +1,3 @@
+ephemeral_state
+build/
+*.o
