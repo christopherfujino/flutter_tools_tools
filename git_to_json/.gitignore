@@ -1,2 +1,5 @@
 pubspec.lock
 .dart_tool/
+
+# git checkouts will be here
+git-workspace/

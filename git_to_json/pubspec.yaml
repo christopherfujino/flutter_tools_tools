@@ -6,4 +6,17 @@ environment:
 dev_dependencies:
   ffigen: 6.1.2
 dependencies:
-  ffi: 2.0.1
+  #ffi: 2.0.1
+
+# https://github.com/dart-lang/ffigen/blob/master/README.md#configurations
+ffigen:
+  output: 'lib/generated_libgit2_bindings.dart'
+  headers:
+    entry-points:
+      - '../third_party/libgit2/include/git2.h'
+    #include-directives:
+    #  - '**index.h'
+    #  - '**/clang-c/**'
+    #  - '/full/path/to/a/header.h'
+  name: # Dart class name
+    LibGitBindings
