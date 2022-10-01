@@ -19,8 +19,8 @@ int main() {
   init();
 
   git_repository* repo = NULL;
-  // clone(&repo, "http://github.com/christopherfujino/dotfiles",
-  //       "./ephemeral_state/dotfiles");
+  clone(&repo, "http://github.com/christopherfujino/dotfiles",
+      "./ephemeral_state/dotfiles");
   open_repo(&repo, "./ephemeral_state/dotfiles");
   status(repo);
   deinit();
