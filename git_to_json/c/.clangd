@@ -1,0 +1,4 @@
+CompileFlags:
+  Add: [-Wall, -I../../third_party/libgit2/include]
+
+# vim: set ft=yaml:
