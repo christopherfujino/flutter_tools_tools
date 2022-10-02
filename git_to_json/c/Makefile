@@ -11,6 +11,10 @@ CFLAGS=-I"../../third_party/libgit2/include" \
 			 -Wall \
 			 -L"../../third_party/libgit2/build" \
 			 -lgit2 \
+			 -lcrypto \
+			 -pthread \
+			 -lssl \
+			 -lz \
 			 -Wl,-rpath,../../third_party/libgit2/build
 
 # https://stackoverflow.com/questions/25160245/clang-linking-with-a-so-file

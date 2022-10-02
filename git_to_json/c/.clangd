@@ -1,4 +1,5 @@
 CompileFlags:
-  Add: [-Wall, -I../../third_party/libgit2/include]
+  # requires clangd v12
+  CompilationDatabase: ./build
 
 # vim: set ft=yaml:
