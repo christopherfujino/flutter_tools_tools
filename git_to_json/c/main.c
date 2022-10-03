@@ -11,6 +11,8 @@ void deinit();
 
 void check(int result);
 
+const char *local_repo_path = "./ephemeral_state/dotfiles";
+
 // struct repository {};
 
 int main() {
@@ -21,7 +23,7 @@ int main() {
   git_repository *repo = NULL;
   clone(&repo, "http://github.com/christopherfujino/dotfiles",
         "./ephemeral_state/dotfiles");
-  open_repo(&repo, "./ephemeral_state/dotfiles");
+  open_repo(&repo, local_repo_path);
   status(repo);
   deinit();
   return 0;
@@ -62,6 +64,7 @@ void status(git_repository *repo) {
   check(git_status_foreach(repo, status_callback, &payload));
 }
 
+/// Log error and exit 1 if result is not 0.
 void check(int result) {
   if (result != 0) {
     const git_error *error = git_error_last();
