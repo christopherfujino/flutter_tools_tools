@@ -7,15 +7,13 @@ project(CGit VERSION 0.1)
 # define executable target
 add_executable(main main.c)
 
-include_directories(../../third_party/libgit2/include)
-link_directories(../../third_party/libgit2/build)
+#include_directories(../../third_party/libgit2/include)
+#link_directories(../../third_party/libgit2/build)
 
-# set cache var LIBGIT2 = resolved path
-find_library(LIBGIT2 libgit2.a ../../third_party/libgit2/build/)
+## set cache var LIBGIT2 = resolved path
+#find_library(LIBGIT2 libgit2.a ../../third_party/libgit2/build/)
 
-# TODO figure out LINK_WITH_STATIC_LIBRARIES
-#target_link_libraries(main ${LIBGIT2})
-target_link_libraries(main ${LIBGIT2} crypto pthread ssl z)
+target_link_libraries(main git2 crypto pthread ssl z)
 
 # C17 requires CMAKE 3.21, while Ubuntu 20.04 LTS comes with 3.16
 set_property(TARGET main PROPERTY C_STANDARD 11)

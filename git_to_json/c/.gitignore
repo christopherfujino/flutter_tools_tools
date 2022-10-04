@@ -1,3 +1,4 @@
 ephemeral_state
 build/
+debug/
 *.o
