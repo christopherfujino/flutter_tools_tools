@@ -13,10 +13,18 @@ add_executable(main main.c)
 ## set cache var LIBGIT2 = resolved path
 #find_library(LIBGIT2 libgit2.a ../../third_party/libgit2/build/)
 
-target_link_libraries(main git2 crypto pthread ssl z)
+target_link_libraries(main git2 crypto pthread ssl z pcre2-8)
 
 # C17 requires CMAKE 3.21, while Ubuntu 20.04 LTS comes with 3.16
 set_property(TARGET main PROPERTY C_STANDARD 11)
 
 # For consumption by clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+# run the entrypoint
+add_custom_target(
+  run # name
+  COMMAND main
+  DEPENDS main
+  WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
+)
