@@ -1,0 +1,7 @@
+name: pr_test_tester
+
+environment:
+  sdk: '^3.0.0-1.0.dev'
+
+dependencies:
+  args: 2.4.0
