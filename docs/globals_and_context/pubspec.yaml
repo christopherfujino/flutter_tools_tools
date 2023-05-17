@@ -1,0 +1,5 @@
+name: globals_and_context
+environment:
+  sdk: ">=3.0.0"
+dependencies:
+  test: ^1.24.3
