@@ -164,6 +164,10 @@ a `Logger` and fall back to our singleton (here it is a singleton because we
 invoke the `const` constructor, we would need some extra typing if we needed
 a non-const constructor).
 
+See [testUsingContext](https://github.com/flutter/flutter/blob/682dd3bdc848e4acd52d1894dc9f5f07cbf8ab69/packages/flutter_tools/test/src/context.dart#L55) and
+[Testbed](https://github.com/flutter/flutter/blob/682dd3bdc848e4acd52d1894dc9f5f07cbf8ab69/packages/flutter_tools/test/src/testbed.dart#L76)
+for the "convenience" wrappers implemented in the tool.
+
 But what the heck is a [Zone](https://dart.dev/articles/archive/zones#zone-basics)
 anyway?
 
