@@ -8,6 +8,8 @@ environment:
 
 # Add regular dependencies here.
 dependencies:
+  github: ^9.15.1
+  http: ^0.13.6
   # path: ^1.8.0
 
 dev_dependencies:
