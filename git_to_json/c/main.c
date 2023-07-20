@@ -20,8 +20,6 @@ void check(int result, const char *description);
 const char *local_repo_path = "./ephemeral_state/dotfiles";
 const int MESSAGE_MAX = 200;
 
-// struct repository {};
-
 int main() {
   init();
 
