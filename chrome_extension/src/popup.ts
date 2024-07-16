@@ -5,7 +5,7 @@
 // Initialize button with user's preferred color
 let changeColor = document.getElementById("changeColor");
 
-const goCrashButton = document.getElementById("go-crash");
+const goCrashButton = document.getElementById("go-crash")!;
 
 // When the button is clicked, inject func into current page
 goCrashButton.addEventListener("click", async () => {
@@ -14,7 +14,7 @@ goCrashButton.addEventListener("click", async () => {
 
   console.log();
   const executionsResults = await chrome.scripting.executeScript({
-    target: { tabId: tab.id },
+    target: { tabId: tab.id! },
     func: goCrash,
   });
   console.log("execution results:");
